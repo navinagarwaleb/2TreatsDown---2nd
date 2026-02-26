@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-mint: #B2D8D8;
+  --color-brand-pink: #F4C2C2;
+  --color-brand-yellow: #FDFD96;
+  --color-brand-dark: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-brand-dark font-sans antialiased;
+  }
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/40 border border-black/5;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-mint via-brand-pink to-brand-yellow;
+}
